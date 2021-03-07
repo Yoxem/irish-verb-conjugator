@@ -209,11 +209,11 @@ function generateConj(orig_txt : string, stem_txt : string, conj_no : Number){
       if (!orig_txt.match('[áÁ][iI][lL]$')){
          alert("原來的詞不以 -áil 結尾。");
       }
-
+      isBroadEnd = true;
       firstConjFillTheArray();
       
 
-      // convert stem -ál to -áil
+      // convert stem -áil to -ál
       var stemAilLeft = stem_txt.substring(0, stem_txt.length-1);
       var stemAil;
       if (stemAilLeft.substring(stemAilLeft.length-1) == 'á'){
